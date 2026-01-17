@@ -16,7 +16,20 @@ nav a:hover { color:#ffcc00; }
 h2 { margin-top:40px; }
 
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-.card { background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:20px; }
+.card {
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  padding:15px;
+}
+
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:10px;
+}
 
 .price { color:#2e7d32; font-weight:bold; }
 
@@ -32,9 +45,7 @@ button {
   cursor:pointer;
 }
 
-.remove {
-  background:#d32f2f;
-}
+.remove { background:#d32f2f; }
 
 footer {
   background:#222;
@@ -77,131 +88,65 @@ footer {
 
 <!-- SERVIÇOS -->
 <section id="servicos" class="page">
-  <h2>🔧 Serviços</h2>
-  <div class="grid">
+<h2>🔧 Serviços</h2>
+<div class="grid">
 
-    <div class="card"><h3>Troca de Pneus</h3><p>Substituição rápida e segura de pneus.</p><p class="price">R$ 50</p><button onclick="add('Troca de Pneus',50)">Adicionar</button></div>
-
-    <div class="card"><h3>Conserto de Pneus e Câmaras</h3><p>Remendos, vulcanização e reparos.</p><p class="price">R$ 30</p><button onclick="add('Conserto de Pneus',30)">Adicionar</button></div>
-
-    <div class="card"><h3>Câmaras de Ar</h3><p>Venda e instalação.</p><p class="price">R$ 75</p><button onclick="add('Câmaras de Ar',75)">Adicionar</button></div>
-
-    <div class="card"><h3>Atendimento 24h</h3><p>Emergências a qualquer hora.</p><p class="price">R$ 80</p><button onclick="add('Atendimento 24h',80)">Adicionar</button></div>
-
-    <div class="card"><h3>Resgate 24h</h3><p>Socorro emergencial em vias.</p><p class="price">R$ 100</p><button onclick="add('Resgate 24h',100)">Adicionar</button></div>
-
-    <div class="card"><h3>Troca de Tração</h3><p>Serviço para motocicletas.</p><p class="price">R$ 40</p><button onclick="add('Troca de Tração',40)">Adicionar</button></div>
-
-    <div class="card"><h3>Macarrão e Remendos Frios</h3><p>Aplicação rápida.</p><p class="price">R$ 20</p><button onclick="add('Macarrão e Remendos',20)">Adicionar</button></div>
-
-    <div class="card"><h3>Aplicação de Vedação</h3><p>Pneus sem câmara.</p><p class="price">R$ 30</p><button onclick="add('Vedação',30)">Adicionar</button></div>
-
-    <div class="card"><h3>Troca de Óleo</h3><p>Motos e veículos leves.</p><p class="price">R$ 60</p><button onclick="add('Troca de Óleo',60)">Adicionar</button></div>
-
-    <div class="card"><h3>Reparos em Jantes</h3><p>Desempenos básicos.</p><p class="price">R$ 70</p><button onclick="add('Reparos em Jantes',70)">Adicionar</button></div>
-
-    <div class="card"><h3>Embuchamentos</h3><p>Para motocicletas.</p><p class="price">R$ 25</p><button onclick="add('Embuchamentos',25)">Adicionar</button></div>
-
-  </div>
-</section>
-
-<!-- PRODUTOS -->
-<section id="produtos" class="page hidden">
-  <h2>🛒 Produtos</h2>
-  <div class="grid">
-    <div class="card"><h3>Câmara de Ar</h3><p class="price">R$ 75</p><button onclick="add('Câmara de Ar',75)">Adicionar</button></div>
-    <div class="card"><h3>Pito / Válvula</h3><p class="price">R$ 25</p><button onclick="add('Pito / Válvula',25)">Adicionar</button></div>
-    <div class="card"><h3>Embuchamento</h3><p class="price">R$ 25</p><button onclick="add('Embuchamento',25)">Adicionar</button></div>
-    <div class="card"><h3>Macarrão</h3><p class="price">R$ 20</p><button onclick="add('Macarrão',20)">Adicionar</button></div>
-    <div class="card"><h3>Vedação</h3><p class="price">R$ 30</p><button onclick="add('Vedação',30)">Adicionar</button></div>
-  </div>
-</section>
-
-<!-- ORÇAMENTO -->
-<section id="orcamento" class="page hidden">
-  <h2>📋 Orçamento</h2>
-  <ul id="items"></ul>
-  <p><strong>Total: R$ <span id="total">0</span></strong></p>
-  <button onclick="sendWhats()">Enviar no WhatsApp</button>
-</section>
-
-<!-- PIX -->
-<section id="pix" class="page hidden">
-  <h2>💰 Pagamento via PIX</h2>
-  <div class="pix-box">
-    <p><strong>Chave PIX:</strong></p>
-    <p>81983633525</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PIX81983633525" alt="QR Code PIX">
-    <p>Após o pagamento, envie o comprovante pelo WhatsApp.</p>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section id="contato" class="page hidden">
-  <h2>📞 Contato</h2>
-  <button onclick="window.open('https://wa.me/5581983633525')">Chamar no WhatsApp</button>
-</section>
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603816245457-fe9c80b740ff">
+<h3>Troca de Pneus</h3>
+<p>Substituição rápida e segura.</p>
+<p class="price">R$ 50</p>
+<button onclick="add('Troca de Pneus',50)">Adicionar</button>
 </div>
 
-<footer>
-  <p>© 2026 Borracharia Rápida 24h</p>
-  <p>(81) 98363-3525 / 98505-1402</p>
-  <p>Av. Joaquim Ribeiro, nº490 – Caxangá / Várzea</p>
-</footer>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9">
+<h3>Conserto de Pneus e Câmaras</h3>
+<p>Remendos e vulcanização.</p>
+<p class="price">R$ 30</p>
+<button onclick="add('Conserto de Pneus',30)">Adicionar</button>
+</div>
 
-<script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let total = cart.reduce((s,i)=>s+i.price,0);
-document.getElementById("total").innerText = total;
+<div class="card">
+<img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04">
+<h3>Câmaras de Ar</h3>
+<p>Venda e instalação.</p>
+<p class="price">R$ 75</p>
+<button onclick="add('Câmaras de Ar',75)">Adicionar</button>
+</div>
 
-function add(name, price){
-  cart.push({name, price});
-  total += price;
-  save();
-}
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<h3>Atendimento 24h</h3>
+<p>Emergências a qualquer hora.</p>
+<p class="price">R$ 80</p>
+<button onclick="add('Atendimento 24h',80)">Adicionar</button>
+</div>
 
-function removeItem(i){
-  total -= cart[i].price;
-  cart.splice(i,1);
-  save();
-}
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+<h3>Resgate 24h</h3>
+<p>Socorro emergencial em vias.</p>
+<p class="price">R$ 100</p>
+<button onclick="add('Resgate 24h',100)">Adicionar</button>
+</div>
 
-function save(){
-  localStorage.setItem("cart", JSON.stringify(cart));
-  document.getElementById("total").innerText = total;
-  render();
-}
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59">
+<h3>Troca de Tração</h3>
+<p>Serviço para motocicletas.</p>
+<p class="price">R$ 40</p>
+<button onclick="add('Troca de Tração',40)">Adicionar</button>
+</div>
 
-function render(){
-  const ul = document.getElementById("items");
-  ul.innerHTML = "";
-  cart.forEach((i,idx)=>{
-    const li = document.createElement("li");
-    li.innerHTML = `${i.name} - R$ ${i.price}
-      <button class="remove" onclick="removeItem(${idx})">X</button>`;
-    ul.appendChild(li);
-  });
-}
-render();
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592928301128-1f9e81b31e3d">
+<h3>Macarrão e Remendos Frios</h3>
+<p>Aplicação rápida.</p>
+<p class="price">R$ 20</p>
+<button onclick="add('Macarrão e Remendos',20)">Adicionar</button>
+</div>
 
-function sendWhats(){
-  const msg = "Orçamento:%0A" +
-    cart.map(i => i.name + " - R$ " + i.price).join("%0A") +
-    "%0A%0ATotal: R$ " + total;
-  window.open("https://wa.me/5581983633525?text=" + msg);
-}
-
-function router(){
-  const hash = location.hash.replace("#/","") || "servicos";
-  document.querySelectorAll(".page").forEach(p=>p.classList.add("hidden"));
-  const page = document.getElementById(hash);
-  if(page) page.classList.remove("hidden");
-}
-
-window.addEventListener("hashchange", router);
-router();
-</script>
-
-</body>
-</html>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597764699512-55f3c1f67f12">
+<h3>Aplicação de Vedaç
