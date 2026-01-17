@@ -1,188 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Borracharia Rápida 24h</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
-    body { background: #f4f4f4; color: #333; }
-    header {
-      background: linear-gradient(135deg, #111, #444);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 { font-size: 2.2rem; }
-    header p { margin-top: 8px; }
-    nav {
-      background: #222;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover { color: #ffcc00; }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1603380353725-f8a4fef98b4b') center/cover no-repeat;
-      height: 320px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 1px 1px 4px #000;
-    }
-    .hero h2 { font-size: 2.5rem; background: rgba(0,0,0,0.5); padding: 15px 25px; border-radius: 8px; }
-    section { padding: 50px 20px; max-width: 1100px; margin: auto; }
-    section h2 { margin-bottom: 20px; color: #111; }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card h3 { margin-bottom: 10px; }
-    .cta {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 15px 30px;
-      background: #25d366;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      border-radius: 30px;
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Borracharia Rápida 24h</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body { margin:0; font-family:Arial, sans-serif; background:#f4f4f4; }
+header { background:#111; color:#fff; padding:20px; text-align:center; }
+nav { background:#222; padding:10px; text-align:center; }
+nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+nav a:hover { color:#ffcc00; }
+
+.container { max-width:1200px; margin:auto; padding:20px; }
+h2 { margin-top:40px; }
+
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.card { background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:20px; }
+.price { color:#2e7d32; font-weight:bold; }
+
+button {
+  margin-top:10px;
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:5px;
+  background:#25d366;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:40px; font-size:0.9rem; }
+.hidden { display:none; }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Borracharia 24h</h1>
-    <p>• Reparos em Pneus • Câmaras de ar • Vulcanização • Remendos </p>
-  </header>
+<header>
+  <h1>🛞 Borracharia Rápida 24h</h1>
+  <p>Socorro, reparos e serviços automotivos</p>
+</header>
 
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contatos</a>
-    <a href="#pix/qrcode">pix/qrcode</a>
-  </nav>
+<nav>
+  <a href="#/servicos">Serviços</a>
+  <a href="#/produtos">Produtos</a>
+  <a href="#/orcamento">Orçamento</a>
+  <a href="#/contato">Contato</a>
+</nav>
 
-  <div class="hero">
-    <h2>Atendimento 24h</h2>
+<div class="container">
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="page">
+  <h2>🔧 Serviços</h2>
+  <div class="grid">
+    <div class="card"><h3>Troca de Pneus</h3><p>Carros, motos e utilitários</p><p class="price">R$ 50</p><button onclick="add('Troca de Pneus',50)">Adicionar</button></div>
+    <div class="card"><h3>Conserto de Pneus</h3><p>Remendos e vulcanização</p><p class="price">R$ 30</p><button onclick="add('Conserto de Pneus',30)">Adicionar</button></div>
+    <div class="card"><h3>Atendimento 24h</h3><p>Emergências a qualquer hora</p><p class="price">R$ 80</p><button onclick="add('Atendimento 24h',80)">Adicionar</button></div>
+    <div class="card"><h3>Troca de Óleo</h3><p>Serviço rápido</p><p class="price">R$ 60</p><button onclick="add('Troca de Óleo',60)">Adicionar</button></div>
+    <div class="card"><h3>Desempeno de Jante</h3><p>Reparos básicos</p><p class="price">R$ 70</p><button onclick="add('Desempeno de Jante',70)">Adicionar</button></div>
   </div>
+</section>
 
-  <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Troca de Pneus</h3>
-        <p>Substituição rápida e segura de pneus para carros, motos e utilitários.</p>
-      </div>
-      <div class="card">
-        <h3>Conserto de Pneus e Câmaras de Ar</h3>
-        <p>Remendo, vulcanização e reparos emergenciais.</p>
-      </div>
-      <div class="card">
-        <h3>Câmaras de Ar</h3>
-        <p>Venda e instalação de câmara de ar.</p>
-      </div>
-      <div class="card">
-        <h3>Atendimento 24h</h3>
-        <p>Socorro rápido a qualquer hora, inclusive finais de semana.</p>
-      </div>
-        <div class="card">
-        <h3>Troca de Pneus</h3>
-        <p>Substituição rápida e segura de pneus para carros, motos e utilitários.</p>
-      </div>
-      <div class="card">
-        <h3>Resgate 24h</h3>
-        <p>Rreparos emergenciais.</p>
-      </div>
-      <div class="card">
-        <h3>Troca de tração</h3>
-        <p>Troca de tração de motocicletas</p>
-      </div>
-      <div class="card">
-        <h3>Macarrão e Remendos frios</h3>
-        <p>Aplicação rápida</p>
-      </div>
-       <div class="card">
-        <h3>Aplicação de vedação</h3>
-        <p> Utilização de pasta apropriada para pneus sem câmaras/p>
-      </div>
-      <div class="card">
-        <h3>Troca de óleo</h3>
-        <p>Socorro rápido a qualquer hora, inclusive finais de semana.</p>
-      </div>
-      <div class="card">
-        <h3>Reparos em Jantes e Desempenos</h3>
-        <p>Reparos primários em jantes empenadas</p>
-      </div>
-      <div class="card">
-        <h3>Embuchamentos</h3>
-        <p>Embuchamentos para motocicletas</p>
-      </div>
-    </div>
-  </section>
+<!-- PRODUTOS -->
+<section id="produtos" class="page hidden">
+  <h2>🛒 Produtos</h2>
+  <div class="grid">
+    <div class="card"><h3>Câmara de Ar</h3><p class="price">R$ 75</p><button onclick="add('Câmara de Ar',75)">Adicionar</button></div>
+    <div class="card"><h3>Pito / Válvula</h3><p class="price">R$ 25</p><button onclick="add('Pito / Válvula',25)">Adicionar</button></div>
+    <div class="card"><h3>Embuchamento</h3><p class="price">R$ 25</p><button onclick="add('Embuchamento',25)">Adicionar</button></div>
+    <div class="card"><h3>Macarrão</h3><p class="price">R$ 20</p><button onclick="add('Macarrão',20)">Adicionar</button></div>
+    <div class="card"><h3>Vedação para Pneus</h3><p class="price">R$ 30</p><button onclick="add('Vedação para Pneus',30)">Adicionar</button></div>
+  </div>
+</section>
 
-  <section id="Produtos">
-    <h2>Produtos</h2>
-    <p>
-      <div class="card">
-        <h3>Câmaras de ar</h3>
-        <p>R$75,00</p>
-      </div>
-      <div class="card">
-        <h3>Pitos/válvulas</h3>
-        <p>R$25,00</p>
-      </div>
-      <div class="card">
-        <h3>Embuchamentos</h3>
-        <p>R$25,00</p>
-      </div>
-      <div class="card">
-        <h3>Macarrão/h3>
-        <p>20,00</p>
-      </div>
-    </p>
-  </section>
+<!-- ORÇAMENTO -->
+<section id="orcamento" class="page hidden">
+  <h2>📋 Orçamento</h2>
+  <ul id="items"></ul>
+  <p><strong>Total: R$ <span id="total">0</span></strong></p>
+  <button onclick="sendWhats()">Enviar Orçamento no WhatsApp</button>
+</section>
 
-  <section id="contato" class="cta">
-    <h2>Precisa de ajuda agora?</h2>
-    <p>Entre em contato pelo WhatsApp e resolvemos na hora.</p>
-    <a href="https://wa.me/5599999999999" target="_blank">Chamar no WhatsApp</a>
-  </section>
+<!-- CONTATO -->
+<section id="contato" class="page hidden">
+  <h2>📞 Contato</h2>
+  <p>Atendimento 24h via WhatsApp</p>
+  <button onclick="window.open('https://wa.me/5599999999999')">Chamar no WhatsApp</button>
+</section>
 
-  <footer>
-    <p>© 2025 Borracharia Rápida 24h • Todos os direitos reservados</p>
-    <p>Telefone: (81) 98363-3525/ 98505-1402</p>
-    <p>Avenida Joaquim Ribeiro, nº490, caxangá-várzea</p>
-  </footer>
+</div>
+
+<footer>
+  <p>© 2026 Borracharia Rápida 24h</p>
+  <p>Telefone: (81) 98363-3525 / 98505-1402</p>
+  <p>Av. Joaquim Ribeiro, nº490 – Caxangá / Várzea</p>
+</footer>
+
+<script>
+let cart = [];
+let total = 0;
+
+function add(name, price){
+  cart.push({name, price});
+  total += price;
+  document.getElementById("total").innerText = total;
+  render();
+}
+
+function render(){
+  const ul = document.getElementById("items");
+  ul.innerHTML = "";
+  cart.forEach(i => {
+    const li = document.createElement("li");
+    li.textContent = i.name + " - R$ " + i.price;
+    ul.appendChild(li);
+  });
+}
+
+function sendWhats(){
+  const msg = "Orçamento:%0A" +
+    cart.map(i => i.name + " - R$ " + i.price).join("%0A") +
+    "%0A%0ATotal: R$ " + total;
+  window.open("https://wa.me/5599999999999?text=" + msg);
+}
+
+function router(){
+  const hash = location.hash.replace("#/","") || "servicos";
+  document.querySelectorAll(".page").forEach(p => p.classList.add("hidden"));
+  const page = document.getElementById(hash);
+  if(page) page.classList.remove("hidden");
+}
+
+window.addEventListener("hashchange", router);
+router();
+</script>
 
 </body>
 </html>
