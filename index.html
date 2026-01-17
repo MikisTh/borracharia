@@ -20,7 +20,7 @@ h2 { margin-top:40px; }
   background:#fff;
   border-radius:10px;
   box-shadow:0 4px 8px rgba(0,0,0,0.1);
-  padding:15px;
+  padding:20px;
 }
 
 .card img{
@@ -72,16 +72,16 @@ footer {
 <body>
 
 <header>
-  <h1>🛞 Borracharia Rápida 24h</h1>
-  <p>Socorro, reparos e serviços automotivos</p>
+<h1>🛞 Borracharia Rápida 24h</h1>
+<p>Socorro, reparos e serviços automotivos</p>
 </header>
 
 <nav>
-  <a href="#/servicos">Serviços</a>
-  <a href="#/produtos">Produtos</a>
-  <a href="#/orcamento">Orçamento</a>
-  <a href="#/pix">PIX</a>
-  <a href="#/contato">Contato</a>
+<a href="#/servicos">Serviços</a>
+<a href="#/produtos">Produtos</a>
+<a href="#/orcamento">Orçamento</a>
+<a href="#/pix">PIX</a>
+<a href="#/contato">Contato</a>
 </nav>
 
 <div class="container">
@@ -94,7 +94,7 @@ footer {
 <div class="card">
 <img src="https://images.unsplash.com/photo-1603816245457-fe9c80b740ff">
 <h3>Troca de Pneus</h3>
-<p>Substituição rápida e segura.</p>
+<p>Substituição rápida e segura de pneus.</p>
 <p class="price">R$ 50</p>
 <button onclick="add('Troca de Pneus',50)">Adicionar</button>
 </div>
@@ -102,7 +102,7 @@ footer {
 <div class="card">
 <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9">
 <h3>Conserto de Pneus e Câmaras</h3>
-<p>Remendos e vulcanização.</p>
+<p>Remendos, vulcanização e reparos.</p>
 <p class="price">R$ 30</p>
 <button onclick="add('Conserto de Pneus',30)">Adicionar</button>
 </div>
@@ -149,4 +149,166 @@ footer {
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1597764699512-55f3c1f67f12">
-<h3>Aplicação de Vedaç
+<h3>Aplicação de Vedação</h3>
+<p>Pneus sem câmara.</p>
+<p class="price">R$ 30</p>
+<button onclick="add('Vedação',30)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414">
+<h3>Troca de Óleo</h3>
+<p>Motos e veículos leves.</p>
+<p class="price">R$ 60</p>
+<button onclick="add('Troca de Óleo',60)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597008641621-12d1bdb28f9b">
+<h3>Reparos em Jantes</h3>
+<p>Desempenos básicos.</p>
+<p class="price">R$ 70</p>
+<button onclick="add('Reparos em Jantes',70)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601924638867-3ec9c0b7c5f4">
+<h3>Embuchamentos</h3>
+<p>Para motocicletas.</p>
+<p class="price">R$ 25</p>
+<button onclick="add('Embuchamentos',25)">Adicionar</button>
+</div>
+
+</div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="page hidden">
+<h2>🛒 Produtos</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04">
+<h3>Câmara de Ar</h3>
+<p class="price">R$ 75</p>
+<button onclick="add('Câmara de Ar',75)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600359753174-7a0b0bfa6f75">
+<h3>Pito / Válvula</h3>
+<p class="price">R$ 25</p>
+<button onclick="add('Pito / Válvula',25)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601924638867-3ec9c0b7c5f4">
+<h3>Embuchamento</h3>
+<p class="price">R$ 25</p>
+<button onclick="add('Embuchamento',25)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1592928301128-1f9e81b31e3d">
+<h3>Macarrão</h3>
+<p class="price">R$ 20</p>
+<button onclick="add('Macarrão',20)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597764699512-55f3c1f67f12">
+<h3>Vedação</h3>
+<p class="price">R$ 30</p>
+<button onclick="add('Vedação',30)">Adicionar</button>
+</div>
+
+</div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section id="orcamento" class="page hidden">
+<h2>📋 Orçamento</h2>
+<ul id="items"></ul>
+<p><strong>Total: R$ <span id="total">0</span></strong></p>
+<button onclick="sendWhats()">Enviar no WhatsApp</button>
+</section>
+
+<!-- PIX -->
+<section id="pix" class="page hidden">
+<h2>💰 Pagamento via PIX</h2>
+<div class="pix-box">
+<p><strong>Chave PIX:</strong></p>
+<p>81983633525</p>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PIX81983633525">
+<p>Após o pagamento, envie o comprovante pelo WhatsApp.</p>
+</div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="page hidden">
+<h2>📞 Contato</h2>
+<button onclick="window.open('https://wa.me/5581983633525')">Chamar no WhatsApp</button>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Borracharia Rápida 24h</p>
+<p>(81) 98363-3525 / 98505-1402</p>
+<p>Av. Joaquim Ribeiro, nº490 – Caxangá / Várzea</p>
+</footer>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = cart.reduce((s,i)=>s+i.price,0);
+document.getElementById("total").innerText = total;
+
+function add(name, price){
+  cart.push({name, price});
+  total += price;
+  save();
+}
+
+function removeItem(i){
+  total -= cart[i].price;
+  cart.splice(i,1);
+  save();
+}
+
+function save(){
+  localStorage.setItem("cart", JSON.stringify(cart));
+  document.getElementById("total").innerText = total;
+  render();
+}
+
+function render(){
+  const ul = document.getElementById("items");
+  ul.innerHTML = "";
+  cart.forEach((i,idx)=>{
+    const li = document.createElement("li");
+    li.innerHTML = `${i.name} - R$ ${i.price}
+      <button class="remove" onclick="removeItem(${idx})">X</button>`;
+    ul.appendChild(li);
+  });
+}
+render();
+
+function sendWhats(){
+  const msg = "Orçamento:%0A" +
+    cart.map(i => i.name + " - R$ " + i.price).join("%0A") +
+    "%0A%0ATotal: R$ " + total;
+  window.open("https://wa.me/5581983633525?text=" + msg);
+}
+
+function router(){
+  const hash = location.hash.replace("#/","") || "servicos";
+  document.querySelectorAll(".page").forEach(p=>p.classList.add("hidden"));
+  const page = document.getElementById(hash);
+  if(page) page.classList.remove("hidden");
+}
+window.addEventListener("hashchange", router);
+router();
+</script>
+
+</body>
+</html>
