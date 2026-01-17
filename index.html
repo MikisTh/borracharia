@@ -2,21 +2,38 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Borracharia Rápida 24h</title>
+<title>Borracharia do Mikis</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body { margin:0; font-family:Arial, sans-serif; background:#f4f4f4; }
-header { background:#111; color:#fff; padding:20px; text-align:center; }
-nav { background:#222; padding:10px; text-align:center; }
+header { background:#263238; color:#fff; padding:20px; text-align:center; }
+nav { background:#37474f; padding:10px; text-align:center; }
 nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-nav a:hover { color:#ffcc00; }
 
 .container { max-width:1200px; margin:auto; padding:20px; }
 h2 { margin-top:40px; }
 
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-.card { background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:20px; }
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  overflow:hidden;
+}
+
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card-content { padding:15px; }
 .price { color:#2e7d32; font-weight:bold; }
 
 button {
@@ -25,77 +42,145 @@ button {
   padding:10px;
   border:none;
   border-radius:5px;
-  background:#25d366;
+  background:#1976d2;
   color:#fff;
   font-weight:bold;
   cursor:pointer;
 }
 
-footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:40px; font-size:0.9rem; }
+footer {
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+}
+
 .hidden { display:none; }
+
+.pix-box {
+  background:#e3f2fd;
+  padding:15px;
+  border-radius:8px;
+  margin-top:20px;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>🛞 Borracharia Rápida 24h</h1>
-  <p>Socorro, reparos e serviços automotivos</p>
+  <h1>🛞 Borracharia do Mikis</h1>
+  <p>Serviços rápidos • Pagamento via PIX • Atendimento imediato</p>
 </header>
 
 <nav>
   <a href="#/servicos">Serviços</a>
-  <a href="#/produtos">Produtos</a>
-  <a href="#/orcamento">Orçamento</a>
-  <a href="#/contato">Contato</a>
+  <a href="#/emergencia">Emergência</a>
+  <a href="#/carrinho">Carrinho</a>
 </nav>
 
 <div class="container">
 
 <!-- SERVIÇOS -->
 <section id="servicos" class="page">
-  <h2>🔧 Serviços</h2>
+  <h2>🔧 Serviços de Borracharia</h2>
   <div class="grid">
-    <div class="card"><h3>Troca de Pneus</h3><p>Carros, motos e utilitários</p><p class="price">R$ 50</p><button onclick="add('Troca de Pneus',50)">Adicionar</button></div>
-    <div class="card"><h3>Conserto de Pneus</h3><p>Remendos e vulcanização</p><p class="price">R$ 30</p><button onclick="add('Conserto de Pneus',30)">Adicionar</button></div>
-    <div class="card"><h3>Atendimento 24h</h3><p>Emergências a qualquer hora</p><p class="price">R$ 80</p><button onclick="add('Atendimento 24h',80)">Adicionar</button></div>
-    <div class="card"><h3>Troca de Óleo</h3><p>Serviço rápido</p><p class="price">R$ 60</p><button onclick="add('Troca de Óleo',60)">Adicionar</button></div>
-    <div class="card"><h3>Desempeno de Jante</h3><p>Reparos básicos</p><p class="price">R$ 70</p><button onclick="add('Desempeno de Jante',70)">Adicionar</button></div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04">
+      <div class="card-content">
+        <h3>Troca de Pneu</h3>
+        <p class="price">R$ 30</p>
+        <button onclick="add('Troca de Pneu',30)">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766">
+      <div class="card-content">
+        <h3>Remendo Simples</h3>
+        <p class="price">R$ 15</p>
+        <button onclick="add('Remendo Simples',15)">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1597008641621-cefdcf71807b">
+      <div class="card-content">
+        <h3>Calibragem</h3>
+        <p class="price">R$ 5</p>
+        <button onclick="add('Calibragem',5)">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605559424843-9cfa4a9b7fa4">
+      <div class="card-content">
+        <h3>Balanceamento</h3>
+        <p class="price">R$ 40</p>
+        <button onclick="add('Balanceamento',40)">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72">
+      <div class="card-content">
+        <h3>Alinhamento</h3>
+        <p class="price">R$ 50</p>
+        <button onclick="add('Alinhamento',50)">Adicionar</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- PRODUTOS -->
-<section id="produtos" class="page hidden">
-  <h2>🛒 Produtos</h2>
+<!-- EMERGÊNCIA -->
+<section id="emergencia" class="page hidden">
+  <h2>🚨 Atendimento de Emergência</h2>
   <div class="grid">
-    <div class="card"><h3>Câmara de Ar</h3><p class="price">R$ 75</p><button onclick="add('Câmara de Ar',75)">Adicionar</button></div>
-    <div class="card"><h3>Pito / Válvula</h3><p class="price">R$ 25</p><button onclick="add('Pito / Válvula',25)">Adicionar</button></div>
-    <div class="card"><h3>Embuchamento</h3><p class="price">R$ 25</p><button onclick="add('Embuchamento',25)">Adicionar</button></div>
-    <div class="card"><h3>Macarrão</h3><p class="price">R$ 20</p><button onclick="add('Macarrão',20)">Adicionar</button></div>
-    <div class="card"><h3>Vedação para Pneus</h3><p class="price">R$ 30</p><button onclick="add('Vedação para Pneus',30)">Adicionar</button></div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601758123927-1961c9a8c9f4">
+      <div class="card-content">
+        <h3>Socorro 24h</h3>
+        <p class="price">R$ 80</p>
+        <button onclick="add('Socorro 24h',80)">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f">
+      <div class="card-content">
+        <h3>Troca Externa</h3>
+        <p class="price">R$ 60</p>
+        <button onclick="add('Troca de Pneu Externa',60)">Adicionar</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ORÇAMENTO -->
-<section id="orcamento" class="page hidden">
-  <h2>📋 Orçamento</h2>
+<!-- CARRINHO -->
+<section id="carrinho" class="page hidden">
+  <h2>🛒 Carrinho</h2>
   <ul id="items"></ul>
   <p><strong>Total: R$ <span id="total">0</span></strong></p>
-  <button onclick="sendWhats()">Enviar Orçamento no WhatsApp</button>
-</section>
 
-<!-- CONTATO -->
-<section id="contato" class="page hidden">
-  <h2>📞 Contato</h2>
-  <p>Atendimento 24h via WhatsApp</p>
-  <button onclick="window.open('https://wa.me/5599999999999')">Chamar no WhatsApp</button>
+  <div class="pix-box">
+    <h3>💰 Pagamento via PIX</h3>
+    <p><strong>Chave PIX:</strong> 11999999999</p>
+    <p><strong>Nome:</strong> Borracharia do Mikis</p>
+    <p>Após o pagamento, envie o comprovante pelo WhatsApp.</p>
+  </div>
+
+  <button onclick="sendWhats()">Enviar Pedido no WhatsApp</button>
 </section>
 
 </div>
 
 <footer>
-  <p>© 2026 Borracharia Rápida 24h</p>
-  <p>Telefone: (81) 98363-3525 / 98505-1402</p>
-  <p>Av. Joaquim Ribeiro, nº490 – Caxangá / Várzea</p>
+  <p>© 2026 - Borracharia do Mikis</p>
 </footer>
 
 <script>
@@ -106,10 +191,10 @@ function add(name, price){
   cart.push({name, price});
   total += price;
   document.getElementById("total").innerText = total;
-  render();
+  renderCart();
 }
 
-function render(){
+function renderCart(){
   const ul = document.getElementById("items");
   ul.innerHTML = "";
   cart.forEach(i => {
@@ -120,12 +205,16 @@ function render(){
 }
 
 function sendWhats(){
-  const msg = "Orçamento:%0A" +
-    cart.map(i => i.name + " - R$ " + i.price).join("%0A") +
-    "%0A%0ATotal: R$ " + total;
+  const msg =
+    "🛞 *Borracharia do Mikis*%0A%0A" +
+    cart.map(i => "• " + i.name + " - R$ " + i.price).join("%0A") +
+    "%0A%0A*Total:* R$ " + total +
+    "%0A%0A*Pagamento via PIX*";
+
   window.open("https://wa.me/5599999999999?text=" + msg);
 }
 
+/* ROTEAMENTO POR HASH */
 function router(){
   const hash = location.hash.replace("#/","") || "servicos";
   document.querySelectorAll(".page").forEach(p => p.classList.add("hidden"));
